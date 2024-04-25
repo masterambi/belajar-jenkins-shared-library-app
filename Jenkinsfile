@@ -1,6 +1,6 @@
 @Library("belajar-jenkins-shared-library@main") _
 
-import programmerzamannow.jenkins.Output;
+import masterambi.jenkins.Output;
 
 pipeline {
     agent any
