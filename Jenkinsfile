@@ -7,7 +7,10 @@ pipeline {
     stages{
         stage("Maven Build") {
             steps {
-                maven.exec("clean compile")
+                script {
+                    maven("clean compile")
+                }
+                
             }
         }
         stage("Global Variable") {
