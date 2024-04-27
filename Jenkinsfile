@@ -4,6 +4,16 @@ import masterambi.jenkins.Output;
 
 pipeline {
     agent any
+    stage("Hello Person") {
+            steps {
+                script {
+                    person.person([
+                        firstName: "Ramzy",
+                        lastName: "Rashaun Arief"
+                    ])
+                }
+            }
+        }
     stages{
         stage("Maven Build") {
             steps {
