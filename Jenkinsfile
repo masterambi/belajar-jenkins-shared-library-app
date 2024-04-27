@@ -5,6 +5,11 @@ import masterambi.jenkins.Output;
 pipeline {
     agent any
     stages{
+        stage("Maven Build") {
+            steps {
+                maven("clean compile")
+            }
+        }
         stage("Global Variable") {
             steps {
                 echo(author())
