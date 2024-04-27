@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage("Maven Build") {
             steps {
-                maven("clean compile")
+                maven.call("clean compile")
             }
         }
         stage("Global Variable") {
