@@ -4,7 +4,8 @@ import masterambi.jenkins.Output;
 
 pipeline {
     agent any
-    stage("Library Resource") {
+    stages{
+        stage("Library Resource") {
             steps {
                 script {
                     def config = libraryResource("config/build.json")
@@ -13,7 +14,6 @@ pipeline {
                 
             }
         }
-    stages{
         stage("Hello Person") {
             steps {
                 script {
